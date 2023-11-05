@@ -1,0 +1,5 @@
+*.log
+nodes.rb
+.settings.yml
+.swarm
+.vagrant

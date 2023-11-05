@@ -1,0 +1,18 @@
+########################
+### Example settings ###
+########################
+
+# This configuration as-is will take 12 threads/cores and 12 GB of RAM
+# Make sure you have enough resources before running something like this.
+
+# Set per-node overrides in nodes.rb if your setup requires it
+
+# Vagrant default global overrides
+#VAGRANT_BOX: debian/bookworm64
+VAGRANT_CPUS: 4
+VAGRANT_MEM: 4096
+#SSH_FORWARD: true
+
+# Swarm default overrides
+#SWARM_NODES: 3
+#JOIN_TIMEOUT: 60
