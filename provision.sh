@@ -11,6 +11,8 @@ set -xe
 which curl &>/dev/null || (apt-get update && apt-get install -y curl)
 which docker &>/dev/null || curl -fsSL https://get.docker.com | sh
 [ ! "$(id -nG vagrant | grep -c docker)" -eq 1 ] && usermod -aG docker vagrant
+systemctl enable docker
+systemctl start docker
 
 # Setup Docker Swarm
 if [ ! "$(docker info | grep -c 'Swarm: active')" -eq 1 ]; then
